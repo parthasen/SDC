@@ -1,0 +1,22 @@
+
+Subject:
+Congratulations on becoming a Self-Driving Car Mentor!
+From:
+"Self-Driving Car Nanodegree team" <selfdrivingcar-support@udacity.com>
+Date:
+13-12-2016 00:43
+To:
+research@parthasen.net
+
+Hello!
+
+Congratulations on becoming a Self-Driving Car Mentor! We are just completing the process of getting you set up. You will soon receive an invitation to the Udacity Mentor Slack team; please sign up and join channels with a #sdcnd- prefix (e.g., #sdcnd-reviews, #sdcnd-general, etc.). We will be using this Slack team to stay connected with Mentors, and we look forward to seeing you there! 
+
+Please feel free to reach out to me (@stephen) if you have any questions after you join.
+
+Best,
+
+Stephen
+Self-Driving Car Nanodegree Services Lead
+Udacity
+
