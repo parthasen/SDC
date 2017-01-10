@@ -1,0 +1,19 @@
+
+
+
+
+
+
+My role in start up is in line with the objective of company focusing on assisting retail investors to crowd source the pricing estimation of a listed equity in NSE or index. Quantifying sentiment of investors and effect of news to asset price will widen up medium of estimations and predictions. Those indirectly will help small investors to reduce risk and will assist them for better selection of stocks.    
+Small investors are more biased to estimated price disclosed by broker/investment houses which leads to loss to many times. Application of analytics and technologies can possible to help them to be more informed before decision making. 
+
+So a large pool of individuals in India will be benefited before any investment in listed stocks. 
+
+To run this start up outside investment is not much important to consider at this moment but important cost to mention is for set up(technology) and to get knowledge to use that technology. This fellowship can help me to reduce this initial cost of acquisition of knowledge. Open source technologies along with fellowship to get the knowledge will help me to form low cost process of involvement of individuals to be informed. 
+
+After acquisition of this knowledge as I stated earlier I want to implement in  my start up in India,Bangalore. I have no further plan to study and may no not be needed. This learning will help me to know better use of open source technologies and I think by next 6 months after completion of course I can complete implementation. And maturity of process will be gained very soon after implementation. 
+
+
+##Creating Environment
+Py3
+----   

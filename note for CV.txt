@@ -1,0 +1,18 @@
+https://www.learnopencv.com/opencv-c-vs-python-vs-matlab-for-computer-vision/
+https://github.com/jesolem/PCV
+https://github.com/todddangerfarr/intro-to-computer-vision-with-python-opencv
+http://opencvpython.blogspot.in/
+https://realpython.com/blog/python/face-detection-in-python-using-a-webcam/
+https://github.com/abidrahmank/OpenCV2-Python-Tutorials
+https://www.youtube.com/watch?v=lJYEup-0gJo
+
+%load and display an image
+img=imread("");
+imshow(img);
+
+%image size:
+disp(size(img))
+
+%image class and data type
+disp(class(img))
+
