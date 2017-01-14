@@ -2,6 +2,8 @@
 [2]https://developer.nvidia.com/cuda-downloads
 [3]http://developer.nvidia.com/cuda-gpus
 
+[1] is important source of doing these steps:
+
 1.readers should be familiar with the Linux environment and the compilation of C programs from the command line
 2.require superuser privileges
 
@@ -147,6 +149,8 @@ Device 0: "Quadro K600"
 deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0, NumDevs = 1, Device0 = Quadro K600
 Result = PASS
 
+Running the bandwidthTest program ensures that the system and the CUDA-capable device are able to communicate correctly:
+octo@octo:~/NVIDIA_CUDA-8.0_Samples/1_Utilities/bandwidthTest$ ./bandwidthTest
 
 Running the Binaries:
 
