@@ -1,0 +1,115 @@
+[1]http://docs.nvidia.com/cuda/cuda-installation-guide-linux/
+[2]https://developer.nvidia.com/cuda-downloads
+[3]http://developer.nvidia.com/cuda-gpus
+
+1.readers should be familiar with the Linux environment and the compilation of C programs from the command line
+2.require superuser privileges
+
+x86_64
+Distribution 	Kernel 	GCC 	GLIBC
+Ubuntu 16.04 	4.4.0 	5.3.1 	2.23
+Ubuntu 14.04 	3.13 	4.8.2 	2.19
+
+
+
+2.1. Verify You Have a CUDA-Capable GPU
+$ lspci | grep -i nvidia
+
+Output:
+01:00.0 VGA compatible controller: NVIDIA Corporation GK107GL [Quadro K600] (rev a1)
+01:00.1 Audio device: NVIDIA Corporation GK107 HDMI Audio Controller (rev a1)
+
+If your graphics card is from NVIDIA and it is listed in[3] , your GPU is CUDA-capable. 
+
+GPU 		Compute Capability
+Quadro K1200 	5.0
+Quadro K620 	5.0
+Quadro K600 	3.0
+
+2.2. Verify You Have a Supported Version of Linux
+$ uname -m && cat /etc/*release
+
+Output:
+x86_64
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.1 LTS"
+NAME="Ubuntu"
+VERSION="16.04.1 LTS (Xenial Xerus)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 16.04.1 LTS"
+VERSION_ID="16.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+VERSION_CODENAME=xenial
+UBUNTU_CODENAME=xenial
+
+
+2.3. Verify the System Has gcc Installed
+gcc --version
+
+Output:
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+
+2.4. Verify the System has the Correct Kernel Headers and Development Packages Installed
+uname -r
+
+Output:
+4.4.0-57-generic
+
+To load:
+$ sudo apt-get install linux-headers-$(uname -r)
+
+2.5. Choose an Installation Method
+
+The CUDA Toolkit can be installed using either of two different installation mechanisms: distribution-specific packages, or a distribution-independent package. The distribution-independent package has the advantage of working across a wider set of Linux distributions, but does not update the distribution's native package management system. The distribution-specific packages interface with the distribution's native package management system. It is recommended to use the distribution-specific packages, where possible. 
+
+2.6. Download the NVIDIA CUDA Toolkit
+
+
+Operating System: Linux
+Architecture: x86_64
+Distribution:Ubuntu
+Version:16.04
+Installer Type:runfile (local)
+
+
+Installation Instructions after download:
+
+    Run `sudo sh cuda_8.0.44_linux.run`
+    Follow the command-line prompts
+
+Download Verification:
+
+
+To add this path to the PATH variable:
+
+$ export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+
+In addition, when using the runfile installation method, the LD_LIBRARY_PATH variable needs to contain /usr/local/cuda-8.0/lib64 on a 64-bit system
+
+To change the environment variables for 64-bit operating systems:
+
+$ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+ Verify the Driver Version:
+cat /proc/driver/nvidia/version
+Output:
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.57  Mon Oct  3 20:37:01 PDT 2016
+
+version of the CUDA Toolkit can be checked by running nvcc -V
+
+Complile NVIDIA CUDA Toolkit includes sample programs in source form:
+
+cd ~/NVIDIA_CUDA-8.0_Samples
+make
+
+Running the Binaries:
+
+
+sudo update-grub
+
