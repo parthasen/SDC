@@ -26,7 +26,37 @@ I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
 
-1.
+1. Create a new conda environment.
+        conda create -n keras python=3.5
+source activate keras
+2.Install GPU TensorFlow.
+pip install tensorflow-gpu
+
+3.
+Install Jupyter.
+        conda install jupyter
+    Install Keras. You only need the latest stable version.
+        pip install keras
+        You might need to pip[3] install:
+            h5py
+            scipy
+            scikit-learn
+            Pillow
+            
+4. CUDA 8 installed.  
+cuda_8.0.44_linux.run
+
+Open bash:
+gedit ~/.bashrc
+
+Save at bottom of the file:
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
+
+source ~/.bashrc
+
+9.
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install build-essential cmake git unzip pkg-config
@@ -34,7 +64,7 @@ $ sudo apt-get install libopenblas-dev liblapack-dev
 $ sudo apt-get install linux-image-generic linux-image-extra-virtual
 $ sudo apt-get install linux-source linux-headers-generic
 
-2. Below link for cuDNN.
+11. Below link for cuDNN.
 https://developer.nvidia.com/rdp/cudnn-download
 Use:
 cuDNN v5.1 Library for Linux
