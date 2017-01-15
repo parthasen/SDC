@@ -2,50 +2,8 @@ Software requirements:
 
     TensorFlow
     Python 3
-
-Instructions
-
-    Create a new conda environment.
-        conda create -n keras python=3.5
-        source activate keras
-    Install GPU TensorFlow.
-        conda install -c conda-forge tensorflow
-        If you want to use the GPU version, follow the instructions here
-    Install Jupyter.
-        conda install jupyter
-    Install Keras. You only need the latest stable version.
-        pip install keras
-        You might need to pip[3] install:
-            h5py
-            scipy
-            scikit-learn
-            Pillow
-
-
-
-    Create a new conda environment.
-        conda create -n keras python=3.5
-        source activate keras
-
-
-
-# Ubuntu/Linux 64-bit, GPU enabled, Python 3.5
-# CUDA 7.5 installed.
-#cuDNN 
-tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz
-sudo cp cuda/include/cudnn.h /usr/local/cuda/include
-sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
-sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
-
-Open bash:
-gedit ~/.bashrc
-
-Save at bottom of the file:
-
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
-export CUDA_HOME=/usr/local/cuda
-
-source ~/.bashrc
+    
+https://github.com/parthasen/SDC/blob/master/TF-gpu
 
 
 Install Bazel 
