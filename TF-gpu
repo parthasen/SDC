@@ -44,8 +44,7 @@ Install Jupyter.
             Pillow
             
 4. CUDA 8 installed.  
-cuda_8.0.44_linux.run
-
+sudo sh cuda_8.0.44_linux.run
 Open bash:
 gedit ~/.bashrc
 
