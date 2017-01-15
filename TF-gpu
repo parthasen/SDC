@@ -26,12 +26,19 @@ I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
 
+1.
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential cmake git unzip pkg-config
+$ sudo apt-get install libopenblas-dev liblapack-dev
+$ sudo apt-get install linux-image-generic linux-image-extra-virtual
+$ sudo apt-get install linux-source linux-headers-generic
 
-1. Below link for cuDNN.
+2. Below link for cuDNN.
 https://developer.nvidia.com/rdp/cudnn-download
 Use:
 cuDNN v5.1 Library for Linux
-2. 
+
 tar xvzf cudnn-8.0-linux-x64-v5.1-ga.tgz
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
