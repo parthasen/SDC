@@ -1,0 +1,27 @@
+pip install tensorflow-gpu
+Collecting tensorflow-gpu
+  Downloading tensorflow_gpu-0.12.1-cp27-cp27mu-manylinux1_x86_64.whl (89.7MB)
+    100% |████████████████████████████████| 89.7MB 9.5kB/s 
+Collecting mock>=2.0.0 (from tensorflow-gpu)
+  Using cached mock-2.0.0-py2.py3-none-any.whl
+Requirement already satisfied: numpy>=1.11.0 in ./anaconda2/lib/python2.7/site-packages (from tensorflow-gpu)
+Collecting protobuf>=3.1.0 (from tensorflow-gpu)
+  Using cached protobuf-3.1.0.post1-py2.py3-none-any.whl
+Requirement already satisfied: wheel in ./anaconda2/lib/python2.7/site-packages (from tensorflow-gpu)
+Requirement already satisfied: six>=1.10.0 in ./anaconda2/lib/python2.7/site-packages (from tensorflow-gpu)
+Collecting funcsigs>=1; python_version < "3.3" (from mock>=2.0.0->tensorflow-gpu)
+  Using cached funcsigs-1.0.2-py2.py3-none-any.whl
+Requirement already satisfied: pbr>=0.11 in ./.local/lib/python2.7/site-packages (from mock>=2.0.0->tensorflow-gpu)
+Requirement already satisfied: setuptools in ./anaconda2/lib/python2.7/site-packages/setuptools-20.3-py2.7.egg (from protobuf>=3.1.0->tensorflow-gpu)
+Installing collected packages: funcsigs, mock, protobuf, tensorflow-gpu
+  Found existing installation: funcsigs 0.4
+    Uninstalling funcsigs-0.4:
+      Successfully uninstalled funcsigs-0.4
+Successfully installed funcsigs-1.0.2 mock-2.0.0 protobuf-3.1.0.post1 tensorflow-gpu-0.12.1
+
+>>> import tensorflow
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
