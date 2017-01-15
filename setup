@@ -28,7 +28,7 @@ Task:
 4. Revisting P1 and P2
 5. GPU to set
 
-AlexNet
+#"carnd-term1 " enviroment is created with GPU
 1. Set up your environment with the Udacity CarND Starter Kit:
 https://github.com/udacity/CarND-Term1-Starter-Kit
     carnd-term1 environment created
@@ -36,7 +36,7 @@ https://github.com/udacity/CarND-Term1-Starter-Kit
 git clone https://github.com/udacity/CarND-Alexnet-Feature-Extraction
 cd CarND-Alexnet-Feature-Extraction
 (carnd-term1) octo@octo:~/CarND-Term1-Starter-Kit/CarND-Alexnet-Feature-Extraction$ 
-3. Download the training data and AlexNet weights. These links are also available at the bottom of this page under Supporting Materials.
+3. Download the training data and AlexNet weights. (loaded at desktop)
 Make sure the downloaded files are in the code directory as the code.
 Open the code in your favorite editor.
 4. https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
