@@ -1,0 +1,24 @@
+Why do we need to pre-process our pixels?
+
+Pixel values often lie in the [0, 255] range. Feeding these values directly into a network may lead to numerical overflows.
+It also turns out that some choices for activation and objective functions are not compatible with all kinds of input. The 
+wrong combination results in a network doing a poor job at learning.
+
+Imagine using sigmoid activation functions in your network. Multiplying your weights with pixel values of large magnitudes
+will force the neuron to saturate. "But your weights will eventually get updated to really small values to counter the effect 
+of the large input". Unfortunately, this won't happen, because the gradients for saturated activations will be too small for
+any significant update to occur. Your weights will end up getting stuck.
+
+Pre-processing techniques:
+
+    mean image subtraction - works well if your color or intensity distributions is not consistent throughout the image 
+    (e.g. only centered objects)     per-channel normalization (subtract mean, divide by standard deviation), pretty standard, 
+    useful for variable sized input where you can't use 1.     per-channel mean subtraction - good for variable sized input where 
+    you can't use 1 and don't want to make too many assumptions about the distribution.     whitening (turn the distribution into
+    a normal distribution, sometimes as easy as normalization but only if it's already normally distributed). Maybe others can 
+    weigh in on cases where whitening is not a good idea.     Dimensionality Reduction (e.g. Principal component analysis).
+    You're basically transforming your data into a compressed space with less dimensions, you control the amount of loss and
+    use that as your input to your network. Not so common for deep learning approaches but applicable nonetheless. This blog 
+    post has some arguments against it: Should you apply PCA to your data?  
+    
+    http://ufldl.stanford.edu/wiki/index.php/Data_Preprocessing
