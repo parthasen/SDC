@@ -35,6 +35,9 @@ Task:
             cd CarND-Alexnet-Feature-Extraction
 (carnd-term1) octo@octo:~/CarND-Term1-Starter-Kit/CarND-Alexnet-Feature-Extraction$ 
 3. Download the training data and AlexNet weights. (loaded at desktop)
+https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580a829f_train/train.p
+https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npy
+
 Make sure the downloaded files are in the code directory as the code.
 Open the code in your favorite editor.
 4. https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
