@@ -1,0 +1,14 @@
+NVIDIA paper
+
+    input layer, 3@80x160
+    Normalization layer, 3@80x160
+    Conv layer, 24 filter size 5*5 + batchnormaization + relu, valid padding
+    Conv layer, 36 filter size 5*5 + batchnormaization + relu, valid padding
+    Conv layer, 48 filter size 5*5 + batchnormaization + relu+dropout, valid padding
+    Conv layer, 64 filter size 3*3 + batchnormaization + relu, valid padding
+    Conv layer, 64 filter size 3*3 + batchnormaization + relu + dropout, valid padding
+    Fully connected layer 1164+ batchnormaization + relu + dropout
+    Fully connected layer 100+ batchnormaization + relu + dropout
+    Fully connected layer 50+ batchnormaization + relu + dropout
+    Fully connected layer 10+ batchnormaization + relu + dropout
+    output layer 1
