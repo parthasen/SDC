@@ -25,6 +25,7 @@ There are some common techniques you should consider using to prevent overfittin
  https://github.com/commaai/research/blob/master/train_steering_model.py
  https://github.com/udacity/self-driving-car/tree/master/steering-models
  5. These are other helpful references 
+  https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
   http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
   https://keras.io/preprocessing/image/
   https://keras.io/getting-started/functional-api-guide/
