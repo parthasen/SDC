@@ -1,6 +1,7 @@
   http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
   https://keras.io/preprocessing/image/
   https://github.com/commaai/research
+  https://github.com/commaai/research/blob/master/train_steering_model.py
   https://github.com/udacity/self-driving-car/blob/master/steering-models/community-models/chauffeur/models.py
   
   Files in this repo
