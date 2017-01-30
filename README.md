@@ -9,6 +9,20 @@
 
 2.Splitting your dataset into a training set and a validation set.
 
+split = (int(len(shuffled_data) * 0.9) // BATCH_SIZE) * BATCH_SIZE
+
+train_data = data[:split]
+
+train_data = remove_low_steering(train_data)
+
+val_data = data[split:]
+
+new_val = (len(val_data) // BATCH_SIZE) * BATCH_SIZE
+
+val_data = val_data[:new_val]
+
+samples_per_epoch = len(train_data) - BATCH_SIZE
+
 ##### fit_generator is used for generate data for training:
 
 Data generated batch-by-batch by this Python generator. The generator is run in parallel to the model, for efficiency.
