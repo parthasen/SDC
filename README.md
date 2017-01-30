@@ -141,4 +141,6 @@ I found final training loss of 0.0348 and validation loss of 0.0301. This model 
 
 https://www.youtube.com/watch?v=yU9Hs0lAvh0
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yU9Hs0lAvh0" frameborder="0" allowfullscreen></iframe>
+
