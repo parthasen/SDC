@@ -1,7 +1,7 @@
 # P3: Behavioural Cloning
 
 #### The objective is to train a model that teaches a car to drive around a track in Udacity's simulator.
-##### A common problem in Deep Learning is overfitting on a given training set. Overfitting by simply memorizing the images and their corresponding steering angles is common and to combat this two tracks on which to train and test. Target of this project is to drive the car successfully on both tracks.
+##### A common problem in Deep Learning is overfitting on a given training set. Overfitting by simply memorizing the images and their corresponding steering angles is common and to combat this two tracks are taken on which to train and test this model. Target of this project is to drive the car successfully on both tracks.
 
 ##### There are some common techniques used here to prevent overfitting:
 
