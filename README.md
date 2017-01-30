@@ -105,8 +105,6 @@ I have selected learning rate of 0.0001 rather than the default adam optimizer r
 
 #### 4. Model
 
-https://github.com/parthasen/SDC/blob/P3/model-visualization.png
-
 model = Sequential()
 
 model.add(Lambda(resize, input_shape=shape))
@@ -190,7 +188,7 @@ dense_4 (Dense)         =========================>           (None, 1)
 
 ### 5.Result 
 
-I found final training loss of 0.0348 and validation loss of 0.0301. This model drives the car well on both tracks (best performance at smallest resolution and lowest graphics), without ever crashing or venturing into dangerous areas.
+I found final training loss of 0.0348 and validation loss of 0.0301. This model drives the car well on both tracks (best performance at smallest resolution and lowest graphics), without ever crashing or venturing into dangerous areas. I used Xeon CPU only and observed around 40s is taken for each epoch. 
 
 #### Simulation
 
