@@ -32,6 +32,8 @@ There are some common techniques used here to prevent overfitting:
 
 4.Model architecture
 
+5.Result
+
 #### 1.Files in this repo
 
 model.py - The script used to create and train the model.
@@ -51,5 +53,74 @@ Dataset has 7 columns: Center, right and left camera. Sterring, throttle, brake 
 
 I have selected learning rate of 0.0001 rather than the default adam optimizer rate of 0.001 to reduce loss.  Batch size considered here is 64 smaller than 128 usual size. I have tested with both the sizes but I found better training result by taking smaller size. I decided to fix 50 epochs after testing for 30 and 40.
 
-### Result
+#### 4. Model
+model = Sequential()
+    model.add(Lambda(resize, input_shape=shape))
+    model.add(Lambda(lambda x: x/255.-0.5))
+    model.add(Convolution2D(24, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
+    model.add(SpatialDropout2D(0.2))
+    model.add(Convolution2D(36, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
+    model.add(SpatialDropout2D(0.2))
+    model.add(Convolution2D(48, 5, 5, border_mode="valid", subsample=(2,2), activation="elu"))
+    model.add(SpatialDropout2D(0.2))
+    model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
+    model.add(SpatialDropout2D(0.2))
+    model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
+    model.add(SpatialDropout2D(0.2))
+    model.add(Flatten())
+    model.add(Dropout(0.5))
+    model.add(Dense(100, activation="elu"))
+    model.add(Dense(50, activation="elu"))
+    model.add(Dense(10, activation="elu"))
+    model.add(Dropout(0.5))
+    model.add(Dense(1))
+
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+lambda_1 (Lambda)                (None, 66, 200, 3)    0           lambda_input_1[0][0]             
+____________________________________________________________________________________________________
+lambda_2 (Lambda)                (None, 66, 200, 3)    0           lambda_1[0][0]                   
+____________________________________________________________________________________________________
+convolution2d_1 (Convolution2D)  (None, 33, 100, 24)   1824        lambda_2[0][0]                   
+____________________________________________________________________________________________________
+spatialdropout2d_1 (SpatialDropo (None, 33, 100, 24)   0           convolution2d_1[0][0]            
+____________________________________________________________________________________________________
+convolution2d_2 (Convolution2D)  (None, 17, 50, 36)    21636       spatialdropout2d_1[0][0]         
+____________________________________________________________________________________________________
+spatialdropout2d_2 (SpatialDropo (None, 17, 50, 36)    0           convolution2d_2[0][0]            
+____________________________________________________________________________________________________
+convolution2d_3 (Convolution2D)  (None, 7, 23, 48)     43248       spatialdropout2d_2[0][0]         
+____________________________________________________________________________________________________
+spatialdropout2d_3 (SpatialDropo (None, 7, 23, 48)     0           convolution2d_3[0][0]            
+____________________________________________________________________________________________________
+convolution2d_4 (Convolution2D)  (None, 5, 21, 64)     27712       spatialdropout2d_3[0][0]         
+____________________________________________________________________________________________________
+spatialdropout2d_4 (SpatialDropo (None, 5, 21, 64)     0           convolution2d_4[0][0]            
+____________________________________________________________________________________________________
+convolution2d_5 (Convolution2D)  (None, 3, 19, 64)     36928       spatialdropout2d_4[0][0]         
+____________________________________________________________________________________________________
+spatialdropout2d_5 (SpatialDropo (None, 3, 19, 64)     0           convolution2d_5[0][0]            
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 3648)          0           spatialdropout2d_5[0][0]         
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 3648)          0           flatten_1[0][0]                  
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 100)           364900      dropout_1[0][0]                  
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 50)            5050        dense_1[0][0]                    
+____________________________________________________________________________________________________
+dense_3 (Dense)                  (None, 10)            510         dense_2[0][0]                    
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 10)            0           dense_3[0][0]                    
+____________________________________________________________________________________________________
+dense_4 (Dense)                  (None, 1)             11          dropout_2[0][0]                  
+====================================================================================================
+Total params: 501,819
+Trainable params: 501,819
+Non-trainable params: 0
+____________________________________________________________________________________________________
+Dropped 3491 rows with low steering
+Epoch 1/50
+
+### 5.Result
 I found final training loss of and validation loss of and this model drives the car well on both tracks (best performance at smallest resolution and lowest graphics), without ever crashing or venturing into dangerous areas.
