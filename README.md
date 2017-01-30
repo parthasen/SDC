@@ -43,9 +43,13 @@ model.py - The script used to create and train the model.
     preprocess.ipynb: Note book for data visualization
     model.ipynb: Notebook used to develop the model.
 
-#### Dataset
+#### 2.Dataset
 Sample dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip Udacity resource link is used for this project.
- 	center 	left 	right 	steering 	throttle 	brake 	speed
-15 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000080
-16 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000079
-17 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000078
+Dataset has 7 columns: Center, right and left camera. Sterring, throttle, brake and speed are other four columns. 
+
+#### 3. Preprocessing and Approach
+
+I have selected learning rate of 0.0001 rather than the default adam optimizer rate of 0.001 to reduce loss.  Batch size considered here is 64 smaller than 128 usual size. I have tested with both the sizes but I found better training result by taking smaller size. I decided to fix 50 epochs after testing for 30 and 40.
+
+### Result
+I found final training loss of and validation loss of and this model drives the car well on both tracks (best performance at smallest resolution and lowest graphics), without ever crashing or venturing into dangerous areas.
