@@ -104,6 +104,13 @@ I have selected learning rate of 0.0001 rather than the default adam optimizer r
 
 
 #### 4. Model
+1."elu" is used in this model as it is easier to use in comparison to "ReLU"
+
+2.Strided convolutions are used at first three convolutional layers with a 2×2 stride and a 5×5 kernel
+
+3.Non-strided convolution layers are used in the last two layers with a 3×3 kernel size. 
+
+Visualtion of model as https://github.com/parthasen/SDC/blob/P3/model-visualization.png taken of NVIDIA paper. 
 
 model = Sequential()
 
