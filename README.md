@@ -9,6 +9,15 @@ There are some common techniques used here to prevent overfitting:
 
 2.Splitting your dataset into a training set and a validation set.
 
+fit_generator is used for generate data for training:
+
+Data generated batch-by-batch by this Python generator. The generator is run in parallel to the model, for efficiency.
+
+Code used:
+
+model.fit_generator(generate_data(train_data), samples_per_epoch=samples_per_epoch, nb_epoch=EPOCHS, validation_data=generate_data(val_data), nb_val_samples=len(val_data))
+
+
  1. fit_generator function provided by Keras is used https://keras.io/models/model/
  2. dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip
  3. 50Hz simulator is used https://files.slack.com/files-pri/T2HQV035L-F3A47CT7Z/download/simulator-linux.zip
@@ -62,7 +71,19 @@ Dataset has 7 columns: Center, right and left camera. Sterring, throttle, brake 
 
 https://github.com/parthasen/SDC/blob/P3/index.png
 
+Steering angle's boundary is from -1 to +1.
+
 #### 3. Preprocessing and Approach
+1.Steering angle =0 is excluded assuming the straight drive
+
+2.
+img=randomise_image_brightness(img)
+
+img=togray(img)
+
+img=normalize(img)
+
+Image is preprocessed like normalization,grayed and change of brightness (HSV)
 
 I have selected learning rate of 0.0001 rather than the default adam optimizer rate of 0.001 to reduce loss.  Batch size considered here is 64 smaller than 128 usual size. I have tested with both the sizes but I found better training result by taking smaller size. I decided to fix 50 epochs after testing for 30 and 40.
 
