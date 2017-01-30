@@ -110,7 +110,7 @@ I have selected learning rate of 0.0001 rather than the default adam optimizer r
 
 3.Non-strided convolution layers are used in the last two layers with a 3×3 kernel size. 
 
-Visualtion of model as https://github.com/parthasen/SDC/blob/P3/model-visualization.png taken of NVIDIA paper. 
+##### Visualization of model as https://github.com/parthasen/SDC/blob/P3/model-visualization.png taken of NVIDIA paper. 
 
 model = Sequential()
 
