@@ -180,4 +180,40 @@ NVIDIA paper
     Fully connected layer 100+ batchnormaization + relu + dropout
     Fully connected layer 50+ batchnormaization + relu + dropout
     Fully connected layer 10+ batchnormaization + relu + dropout
+    
+    https://github.com/hortovanyi/udacity-behavioral-cloning-project/blob/master/behavorial-cloning-initial-data-exploration.ipynb
+
+https://github.com/jessicayung/self-driving-car-nd/tree/master/p3-behavioural-cloning
+
+https://github.com/dyelax/CarND-Behavioral-Cloning
+
+https://github.com/LevinJ/Behavioural-Cloning-P3
+
+https://github.com/hortovanyi/udacity-behavioral-cloning-project/blob/master/model.py
+
+https://github.com/dmonn/behavioral-cloning/blob/master/model.py
+
+https://github.com/udacity/ud864
+
+https://github.com/diyjac/SDC-P3
+
+https://github.com/gpavlov2016/p3-behavioral-cloning/blob/master/training-model-vgg16-arch-pretrained.ipynb
+
+https://github.com/udacity/self-driving-car/blob/master/steering-models/community-models/chauffeur/models.py
+
+https://github.com/upul/behavioral_cloning
+
+https://github.com/pkern90/behavioral-cloning
+
+https://github.com/wonjunee/behavioral-cloning
+
+https://github.com/JustinHeaton/Behavioral-Cloning/blob/master/model.py
+
+https://github.com/thomasantony/sdc-live-trainer
+
+https://github.com/georgesung/behavioral_cloning/blob/master/preprocess_data.py
+
+https://github.com/mvpcom/Udacity-CarND-Project-3/blob/master/README.md
     output layer 1
+    keras model is used at model.py
+https://github.com/pkern90/behavioral-cloning
