@@ -1,8 +1,6 @@
-# SDC
-self driving car related everything
-P3: Behavioural Cloning
+# P3: Behavioural Cloning
 
-The objective of this project is to train a model that teaches a car to drive around a track in Udacity's simulator.
+## The objective is to train a model that teaches a car to drive around a track in Udacity's simulator.
 
 This README contains info on
 
