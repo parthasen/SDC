@@ -104,6 +104,9 @@ I have selected learning rate of 0.0001 rather than the default adam optimizer r
 
 
 #### 4. Model
+
+https://github.com/parthasen/SDC/blob/P3/model-visualization.png
+
 model = Sequential()
 
 model.add(Lambda(resize, input_shape=shape))
