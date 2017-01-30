@@ -9,7 +9,7 @@
 
 model.add(Dropout(0.5))
 
-2.Splitting your dataset into a training set and a validation set.
+2.Splitting your dataset into a training set and a validation set. (90%)
 
 split = (int(len(shuffled_data) * 0.9) // BATCH_SIZE) * BATCH_SIZE
 
