@@ -60,6 +60,8 @@ https://github.com/parthasen/SDC/blob/P3/model.ipynb
 Sample dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip Udacity resource link is used for this project.
 Dataset has 7 columns: Center, right and left camera. Sterring, throttle, brake and speed are other four columns. 
 
+https://github.com/parthasen/SDC/blob/P3/index.png
+
 #### 3. Preprocessing and Approach
 
 I have selected learning rate of 0.0001 rather than the default adam optimizer rate of 0.001 to reduce loss.  Batch size considered here is 64 smaller than 128 usual size. I have tested with both the sizes but I found better training result by taking smaller size. I decided to fix 50 epochs after testing for 30 and 40.
