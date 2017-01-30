@@ -15,12 +15,16 @@
 #### 1.Files in this repo
 
 model.py: Python script to read data, train model and save model.
+
 model.json: Model architecture.
+
 model.h5: Model weights (Large file, > 300MB).
+
 drive.py: Python script that tells the car in the simulator how to drive
-data/data: file with training data
-        Attributes such as 'steering angle' mapped to image paths in driving_log.csv.
-        Images in IMG/.
+
+data/data: file with training data,attributes such as 'steering angle' mapped to image paths in driving_log.csv.Images in IMG/.
+        
 preprocess.ipynb: Note book for data visualization
+
 model.ipynb: Notebook used to develop the model.
 
