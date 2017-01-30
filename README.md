@@ -62,6 +62,7 @@ https://github.com/parthasen/SDC/blob/P3/model.h5
 README.md - explains the structure of your network and training approach.
 
 preprocess.ipynb: Note book for data visualization
+https://github.com/parthasen/SDC/blob/P3/preprocess.ipynb
 
 model.ipynb: Notebook used to develop the model.
 https://github.com/parthasen/SDC/blob/P3/model.ipynb
