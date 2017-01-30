@@ -138,3 +138,5 @@ dense_4 (Dense)         =========================>           (None, 1)
 ### 5.Result 
 
 I found final training loss of 0.0348 and validation loss of 0.0301. This model drives the car well on both tracks (best performance at smallest resolution and lowest graphics), without ever crashing or venturing into dangerous areas.
+
+https://www.youtube.com/watch?v=yU9Hs0lAvh0
