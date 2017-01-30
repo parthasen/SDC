@@ -7,6 +7,8 @@
 
 1.Adding dropout layers to your network.
 
+model.add(Dropout(0.5))
+
 2.Splitting your dataset into a training set and a validation set.
 
 split = (int(len(shuffled_data) * 0.9) // BATCH_SIZE) * BATCH_SIZE
