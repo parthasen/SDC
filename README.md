@@ -82,9 +82,9 @@ img=randomise_image_brightness(img)
 
 img=togray(img)
 
-img=normalize(img)
+trans_image()
 
-Image is preprocessed like normalization,grayed and change of brightness (HSV)
+Image is preprocessed like normalization ( using lamda function lambda x: x/255.-0.5) ,translation, grayed image and change of brightness (HSV)
 
 I have selected learning rate of 0.0001 rather than the default adam optimizer rate of 0.001 to reduce loss.  Batch size considered here is 64 smaller than 128 usual size. I have tested with both the sizes but I found better training result by taking smaller size. I decided to fix 50 epochs after testing for 30 and 40.
 
