@@ -45,3 +45,7 @@ model.py - The script used to create and train the model.
 
 #### Dataset
 Sample dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip Udacity resource link is used for this project.
+ 	center 	left 	right 	steering 	throttle 	brake 	speed
+15 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000080
+16 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000079
+17 	/home/octo/Desktop/simulator-linux/IMG/center_... 	/home/octo/Desktop/simulator-linux/IMG/left_2... 	/home/octo/Desktop/simulator-linux/IMG/right_... 	0.0 	0.0 	0.0 	0.000078
