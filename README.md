@@ -37,13 +37,24 @@ There are some common techniques used here to prevent overfitting:
 #### 1.Files in this repo
 
 model.py - The script used to create and train the model.
-    drive.py - The script to drive the car. You can feel free to resubmit the original drive.py or make modifications 
+https://github.com/parthasen/SDC/blob/P3/model.py
+
+drive.py - The script to drive the car. You can feel free to resubmit the original drive.py or make modifications 
     and submit your modified version.
-    model.json - The model architecture.
-    model.h5 - The model weights.
-    README.md - explains the structure of your network and training approach.
-    preprocess.ipynb: Note book for data visualization
-    model.ipynb: Notebook used to develop the model.
+https://github.com/parthasen/SDC/blob/P3/drive.py    
+
+model.json - The model architecture.
+https://github.com/parthasen/SDC/blob/P3/model.json
+
+model.h5 - The model weights.
+https://github.com/parthasen/SDC/blob/P3/model.h5
+
+README.md - explains the structure of your network and training approach.
+
+preprocess.ipynb: Note book for data visualization
+
+model.ipynb: Notebook used to develop the model.
+https://github.com/parthasen/SDC/blob/P3/model.ipynb
 
 #### 2.Dataset
 Sample dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip Udacity resource link is used for this project.
