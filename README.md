@@ -55,27 +55,48 @@ I have selected learning rate of 0.0001 rather than the default adam optimizer r
 
 #### 4. Model
 model = Sequential()
-    model.add(Lambda(resize, input_shape=shape))
-    model.add(Lambda(lambda x: x/255.-0.5))
-    model.add(Convolution2D(24, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
-    model.add(SpatialDropout2D(0.2))
-    model.add(Convolution2D(36, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
-    model.add(SpatialDropout2D(0.2))
-    model.add(Convolution2D(48, 5, 5, border_mode="valid", subsample=(2,2), activation="elu"))
-    model.add(SpatialDropout2D(0.2))
-    model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
-    model.add(SpatialDropout2D(0.2))
-    model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
-    model.add(SpatialDropout2D(0.2))
-    model.add(Flatten())
-    model.add(Dropout(0.5))
-    model.add(Dense(100, activation="elu"))
-    model.add(Dense(50, activation="elu"))
-    model.add(Dense(10, activation="elu"))
-    model.add(Dropout(0.5))
-    model.add(Dense(1))
 
-Layer (type)                     Output Shape          Param #     Connected to                     
+model.add(Lambda(resize, input_shape=shape))
+
+model.add(Lambda(lambda x: x/255.-0.5))
+
+model.add(Convolution2D(24, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
+
+model.add(SpatialDropout2D(0.2))
+
+model.add(Convolution2D(36, 5, 5, border_mode="same", subsample=(2,2), activation="elu"))
+
+model.add(SpatialDropout2D(0.2))
+
+model.add(Convolution2D(48, 5, 5, border_mode="valid", subsample=(2,2), activation="elu"))
+
+model.add(SpatialDropout2D(0.2))
+
+model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
+
+model.add(SpatialDropout2D(0.2))
+
+model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu"))
+
+model.add(SpatialDropout2D(0.2))
+
+model.add(Flatten())
+
+model.add(Dropout(0.5))
+
+model.add(Dense(100, activation="elu"))
+
+model.add(Dense(50, activation="elu"))
+
+model.add(Dense(10, activation="elu"))
+
+model.add(Dropout(0.5))
+
+model.add(Dense(1))
+
+====>
+
+Layer (type)                     Output Shape          Param       Connected to                     
 ====================================================================================================
 lambda_1 (Lambda)                (None, 66, 200, 3)    0           lambda_input_1[0][0]             
 ____________________________________________________________________________________________________
