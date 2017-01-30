@@ -28,3 +28,5 @@ preprocess.ipynb: Note book for data visualization
 
 model.ipynb: Notebook used to develop the model.
 
+#### Dataset
+Sample dataset downloaded from  https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip Udacity resource link is used for this project.
