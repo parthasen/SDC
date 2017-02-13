@@ -34,11 +34,11 @@ Three functions used those apply Sobel x or y, then takes an absolute value and 
 5)  Create a mask of 1's where the scaled gradient magnitude 
             is > thresh_min and < thresh_max
 6)  Return this mask as your binary_output image
-** abs_sobel_thresh(image, orient='x', sobel_kernel=3, thresh=(30, 130)) ** function used to get  absolute value and applies a threshold.
+**abs_sobel_thresh(image, orient='x', sobel_kernel=3, thresh=(30, 130))** function used to get  absolute value and applies a threshold.
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/4.png)
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/5.png)
 
-** mag_thresh(img, sobel_kernel=3, mag_thresh=(0, 255)) ** function used to compute the magnitude of the gradient and applies a threshold.
+**mag_thresh(img, sobel_kernel=3, mag_thresh=(0, 255))** function used to compute the magnitude of the gradient and applies a threshold.
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/6.png)
 
 **dir_threshold(img, sobel_kernel=15, thresh=(0, np.pi/2))** function used to compute the direction of the gradient and applies a threshold.
@@ -50,8 +50,21 @@ All those absolute value, magnitude, direction  and thresholds the S-channel of 
 Comparing all those tests I found combind output using multiple thresholds can be used further.
 
 ## 4.  Apply a perspective transform
-'''
-    src = np.float32([[308,260],[408,260],[50,380],[650,380]])
-    dst = np.float32([[0,0],[720,0],[0,405],[720,405]])
-'''
-First image was undistorted, <del>cv2.getPerspectiveTransform(src, dst)</del>
+*src = np.float32([[308,260],[408,260],[50,380],[650,380]])* and *dst = np.float32([[0,0],[720,0],[0,405],[720,405]])* are used to find the source and destination and used in **cv2.getPerspectiveTransform(src, dst)** for transformation. This was again used in *cv2.warpPerspective(undist, M, img_size)* to get transformed image. 
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/10.png)
+
+            M = cv2.getPerspectiveTransform(src, dst)
+            warped = cv2.warpPerspective(undist, M, img_size)
+            ksize=3
+            gradx = abs_sobel_thresh(warped, orient='x', sobel_kernel=ksize, thresh=(10, 230))
+            grady = abs_sobel_thresh(warped, orient='y', sobel_kernel=ksize, thresh=(10, 230))
+            mag_binary = mag_thresh(warped, sobel_kernel=ksize, mag_thresh=(30, 150))
+            dir_binary = dir_threshold(warped, sobel_kernel=ksize, thresh=(0.7, 1.3))
+            hls_binary = HLS_single(warped,thresh=(90, 255))
+            combined = np.zeros_like(dir_binary)
+            combined[((gradx == 1) & (hls_binary == 1)) | ((mag_binary == 1) & (dir_binary == 1))] = 1
+Above code is used to get warped image with combined gradient thresholds. 
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/11.png)
+
+## 5.  Detect lane lines
