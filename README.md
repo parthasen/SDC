@@ -10,7 +10,7 @@ The goals / steps of this project are the following:
 8.  Output visual display of the lane boundaries
 
 # Output Video: 
-[![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
+[![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=uFZKInMRB28)
 
 ## 1. Camera calibration 
 From the image below I find 9 coners in the x axis and 6 coners in the y axis. I scaled down the images from 1280 to 720:
@@ -141,7 +141,7 @@ https://github.com/parthasen/SDC/blob/P4/challenge_video_output.mp4
 
 https://github.com/parthasen/SDC/blob/P4/harder_challenge_video_out1.mp4
 
-[![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
+[![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=uFZKInMRB28)
 
 ## Discussion
 Where will your pipeline likely fail?
