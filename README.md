@@ -50,7 +50,11 @@ All those absolute value, magnitude, direction  and thresholds the S-channel of 
 Comparing all those tests I found combind output using multiple thresholds can be used further.
 
 ## 4.  Apply a perspective transform
-*src = np.float32([[308,260],[408,260],[50,380],[650,380]])* and *dst = np.float32([[0,0],[720,0],[0,405],[720,405]])* are used to find the source and destination and used in **cv2.getPerspectiveTransform(src, dst)** for transformation. This was again used in *cv2.warpPerspective(undist, M, img_size)* to get transformed image. 
+
+            src = np.float32([[308,260],[408,260],[50,380],[650,380]])
+            dst = np.float32([[0,0],[720,0],[0,405],[720,405]])
+
+are used to find the source and destination and used in **cv2.getPerspectiveTransform(src, dst)** for transformation. This was again used in *cv2.warpPerspective(undist, M, img_size)* to get transformed image. 
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/10.png)
 
