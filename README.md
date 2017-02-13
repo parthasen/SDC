@@ -72,3 +72,17 @@ Above code is used to get warped image with combined gradient thresholds.
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/11.png)
 
 ## 5.  Detect lane lines
+1. Warped image after perspective transformation and after applying gradient thresholds is used to get the histogram.
+2. 9 slideing windows are used to get x and y position 
+3. 2nd order polynomial is calculated from the code below 
+
+            left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+            right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+            
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/12.png)
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/13.png)
+
+Using above 3 steps finally I find this:
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/14.png)
