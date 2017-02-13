@@ -46,3 +46,12 @@ Three functions used those apply Sobel x or y, then takes an absolute value and 
 
 All those absolute value, magnitude, direction  and thresholds the S-channel of HLS are used for combined output.
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/9.png)
+
+Comparing all those tests I found combind output using multiple thresholds can be used further.
+
+## 4.  Apply a perspective transform
+'''
+src = np.float32([[308,260],[408,260],[50,380],[650,380]])
+dst = np.float32([[0,0],[720,0],[0,405],[720,405]])
+'''
+First image was undistorted, cv2.getPerspectiveTransform(src, dst)
