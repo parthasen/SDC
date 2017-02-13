@@ -135,3 +135,4 @@ Then I defined y-value where we want radius of curvature.
      result = cv2.addWeighted(img, 1, unwarp, 0.3, 0)
 ## 8.  Output visual display of the lane boundaries     
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/16.png)
+[![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
