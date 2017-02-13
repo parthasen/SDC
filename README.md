@@ -9,6 +9,9 @@ The goals / steps of this project are the following:
 7.  Warp the detected lane boundaries back onto the original image.
 8.  Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+![Video Output](https://www.youtube.com/watch?v=_u6I9w6048w)
+
 # 1. Camera calibration 
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/1.png)
+
