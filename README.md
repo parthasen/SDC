@@ -20,3 +20,7 @@ Based on [x=9,y=6] points calibration is done as in cell 5,I assumed z=0 of [x,y
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/1.png)
 
+# 1. Remove distortion from images
+**cv2.undistort(img, mtx, dist, None, mtx)** calculates camera calibration matrix and distortion coefficients to remove distortion from an image and output the undistorted image. The images used here are in **test_images** for testing pipeline on single frame. **objpoints, imgpoints** are used here again in **cv2.calibrateCamera(objpoints, imgpoints, img_size,None,None)**.
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/3.png)
