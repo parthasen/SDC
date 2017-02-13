@@ -51,7 +51,7 @@ Comparing all those tests I found combind output using multiple thresholds can b
 
 ## 4.  Apply a perspective transform
 '''
-src = np.float32([[308,260],[408,260],[50,380],[650,380]])
-dst = np.float32([[0,0],[720,0],[0,405],[720,405]])
+    src = np.float32([[308,260],[408,260],[50,380],[650,380]])
+    dst = np.float32([[0,0],[720,0],[0,405],[720,405]])
 '''
 First image was undistorted, cv2.getPerspectiveTransform(src, dst)
