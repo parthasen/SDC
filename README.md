@@ -13,8 +13,9 @@ The goals / steps of this project are the following:
 [![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
 
 # 1. Camera calibration 
+From the image below I find 9 coners in the x axis and 6 coners in the y axis. I scaled down the images from 1280 to 720:
 ![No of Corners](https://github.com/parthasen/SDC/blob/P4/output_images/0.png)
-From the above image I find 9 coners in the x axis and 6 coners in the y axis. I scaled down the images from 1280 to 720. 
+
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/1.png)
 
