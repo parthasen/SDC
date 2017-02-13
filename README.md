@@ -107,22 +107,20 @@ Then I defined y-value where we want radius of curvature.
  Above codes are used get lane curvature:
  ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/15.png)
  
-  # Calculated the turning center point xc, yc and radius: 
+  I calculated the turning center point xc, yc and radius as below: 
             
-    lm1, lm2, lxc, lyc, lradius = c_radius(left_fitx_1,y_eval1,left_fitx_2,y_eval2,left_fitx_3,y_eval3,)
-    l_steering_angle = 4*360/lxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
+      lm1, lm2, lxc, lyc, lradius = c_radius(left_fitx_1,y_eval1,left_fitx_2,y_eval2,left_fitx_3,y_eval3,)
+      l_steering_angle = 4*360/lxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
+      rm1, rm2, rxc, ryc, rradius = c_radius(right_fitx_1,y_eval1,right_fitx_2,y_eval2,right_fitx_3,y_eval3,)
+      r_steering_angle = 4*360/rxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
+      steering_angle = l_steering_angle + r_steering_angle
+      turning_radius = (lradius+rradius)/2 # smooth out the radius
     
-    
-    rm1, rm2, rxc, ryc, rradius = c_radius(right_fitx_1,y_eval1,right_fitx_2,y_eval2,right_fitx_3,y_eval3,)
-     
-    r_steering_angle = 4*360/rxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
-    steering_angle = l_steering_angle + r_steering_angle
-    turning_radius = (lradius+rradius)/2 # smooth out the radius
-    
-    # Find camera position
-    left_mean = np.mean(leftx)
-    right_mean = np.mean(rightx)
-    camera_pos = (combined.shape[1]/2)-np.mean([left_mean, right_mean])
+   And camera position:
+   
+       left_mean = np.mean(leftx)
+       right_mean = np.mean(rightx)
+       camera_pos = (combined.shape[1]/2)-np.mean([left_mean, right_mean])
  
  ## 7.  Warp the detected lane boundaries back onto the original image.
  Warp back to original view using Mi:
@@ -135,4 +133,12 @@ Then I defined y-value where we want radius of curvature.
      result = cv2.addWeighted(img, 1, unwarp, 0.3, 0)
 ## 8.  Output visual display of the lane boundaries     
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/16.png)
+
+https://github.com/parthasen/SDC/blob/P4/project_video_output.mp4
+
+https://github.com/parthasen/SDC/blob/P4/challenge_video_output.mp4
+
+https://github.com/parthasen/SDC/blob/P4/harder_challenge_video_out1.mp4
+
 [![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
+
