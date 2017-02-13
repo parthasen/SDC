@@ -1,4 +1,4 @@
-The goals / steps of this project are the following:
+The steps of this project are the following:
 
 1.  camera calibration 
 2.  Remove distortion from images
