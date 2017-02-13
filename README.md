@@ -143,3 +143,17 @@ https://github.com/parthasen/SDC/blob/P4/harder_challenge_video_out1.mp4
 
 [![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
 
+## Discussion
+Where will your pipeline likely fail?
+1. Line detection is not working well for harder and challenger videos. 
+2. When light or shade is excessive than test images then pipeline is not working.
+Briefly discuss any problems / issues you faced in your implementation of this project.
+3. I used Udacity sliding window detector but other methods may be helpful. we can use machine learning approach instead. 
+4. Speed is slightly increased by reducing image size. Speed was slowed down at first when I was using full size images. 
+5. Tuning thresholds and finding shape of source and destination were time taking. 
+6. Line fitting algorithm works worse on the dashed line.It's because there was not enough points to fit the line.
+What could you do to make it more robust?
+7. Smoothin using moving average
+8. Working on qwn video after completion of term 1. 
+9. More application of CNN 
+
