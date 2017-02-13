@@ -32,6 +32,7 @@ Three functions used those apply Sobel x or y, then takes an absolute value and 
 3)  Take the absolute value of the derivative or gradient
 4)  Scale to 8-bit (0 - 255) then convert to type = np.uint8
 5)  Create a mask of 1's where the scaled gradient magnitude 
+
             is > thresh_min and < thresh_max
 6)  Return this mask as your binary_output image
 **abs_sobel_thresh(image, orient='x', sobel_kernel=3, thresh=(30, 130))** function used to get  absolute value and applies a threshold.
