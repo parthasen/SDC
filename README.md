@@ -10,5 +10,5 @@ The goals / steps of this project are the following:
 8.  Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
 # 1. Camera calibration 
-Calibration result:
-![](https://github.com/parthasen/SDC/blob/P4/output_images/1.png)
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/1.png)
