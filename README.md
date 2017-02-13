@@ -5,9 +5,9 @@ The goals / steps of this project are the following:
 3.  Color And Gradiant Threshold: use of color transforms, gradients, etc., to create a thresholded binary image.
 4.  Apply a perspective transform to rectify binary image ("birds-eye view").
 5.  Detect lane lines
-6.  Determine the lane curvature
+6.  Determine the lane curvature  and numerical estimation vehicle position.
 7.  Warp the detected lane boundaries back onto the original image.
-8.  Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+8.  Output visual display of the lane boundaries
 
 # Output Video: 
 [![Video Output](https://i.ytimg.com/vi/_u6I9w6048w/3.jpg?time=1486986474285)](https://www.youtube.com/watch?v=_u6I9w6048w)
@@ -86,3 +86,52 @@ Above code is used to get warped image with combined gradient thresholds.
 Using above 3 steps finally I find this:
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/14.png)
+
+## 6.  Determine the lane curvature  and numerical estimation vehicle position.
+            
+I defined conversions in x and y from pixels space to meters:
+
+     ym_per_pix = 30/405 # meters per pixel in y dimension
+     xm_per_pix = 3.7/600 # meteres per pixel in x dimension
+Then I defined y-value where we want radius of curvature.
+            
+     left_fit_cr = np.polyfit(np.array(lefty,dtype=np.float32)*ym_per_pix, \
+                         np.array(leftx,dtype=np.float32)*xm_per_pix, 2)
+     right_fit_cr = np.polyfit(np.array(righty,dtype=np.float32)*ym_per_pix, \
+                          np.array(rightx,dtype=np.float32)*xm_per_pix, 2)
+     left_curverad = ((1 + (2*left_fit_cr[0]*y_eval + left_fit_cr[1])**2)**1.5) \
+                             /np.absolute(2*left_fit_cr[0])
+     right_curverad = ((1 + (2*right_fit_cr[0]*y_eval + right_fit_cr[1])**2)**1.5) \
+ 
+                                /np.absolute(2*right_fit_cr[0])
+ Above codes are used get lane curvature:
+ ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/15.png)
+ 
+  # Calculated the turning center point xc, yc and radius: 
+            
+    lm1, lm2, lxc, lyc, lradius = c_radius(left_fitx_1,y_eval1,left_fitx_2,y_eval2,left_fitx_3,y_eval3,)
+    l_steering_angle = 4*360/lxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
+    
+    
+    rm1, rm2, rxc, ryc, rradius = c_radius(right_fitx_1,y_eval1,right_fitx_2,y_eval2,right_fitx_3,y_eval3,)
+     
+    r_steering_angle = 4*360/rxc # assume xc <> 0, xc and radius value is very close, xc will show the direction as well
+    steering_angle = l_steering_angle + r_steering_angle
+    turning_radius = (lradius+rradius)/2 # smooth out the radius
+    
+    # Find camera position
+    left_mean = np.mean(leftx)
+    right_mean = np.mean(rightx)
+    camera_pos = (combined.shape[1]/2)-np.mean([left_mean, right_mean])
+ 
+ ## 7.  Warp the detected lane boundaries back onto the original image.
+ Warp back to original view using Mi:
+ 
+     M = cv2.getPerspectiveTransform(src, dst)
+     Mi = cv2.getPerspectiveTransform(dst, src)
+     unwarp =cv2.warpPerspective(warp_zero, Mi,img_size)
+ Combine the result with the original image:
+            
+     result = cv2.addWeighted(img, 1, unwarp, 0.3, 0)
+## 8.  Output visual display of the lane boundaries     
+![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/16.png)
