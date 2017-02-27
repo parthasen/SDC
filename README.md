@@ -187,10 +187,30 @@ Modified pipeline is done like `img` an output of detected vehicle image as inpu
 
 
 
-### Discussion
+### Discussion and Challenges
 
-I followed  steps of this project are the following:
+Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. Briefly to state the steps are like: 
+            
+Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
 
-    Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+**Challenges**
 
-The result contains few false positives and the rectangles to identify vehicles is bit jittery.
+1. Parameter tuning and finding the right combinations.
+
+        Tuning was conducted on all test images. After achieving good results on the images, the pipeline was applied to the video. 
+2. Video processing was time taking. 
+3. Sliding windows grid and heatmap threshold were another parameters to optimize. Previously tuned, optimized, parameters were disturbed due to these. And another change was needed.
+4. The result contains few false positives
+5. The rectangles to identify vehicles is bit jittery.
+
+In future I'll try
+
+1. Better error handling and application of class.
+2. Additional feature extraction using a grid search approach, removing duplicate and highly correlated features, etc.
+3. Application of Trees and CNN for better classification.
+4. Better data augmentation (e.g rotating, flipping images) to prevent false positives. 
+5. Improvement of pipeline to work on own video. 
+6. To Use voxelization techiques to speed up the vehicle detection model and rendering of the 3D model of the scene.
+https://developer.nvidia.com/content/basics-gpu-voxelization
+
+
