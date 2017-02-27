@@ -52,7 +52,7 @@ Randomly selecting and ploting same from `non-vehicle` class:
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/4.png)
   
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
-  # Define HOG parameters
+*Define HOG parameters*
       orient = 9
       pix_per_cell = 8
       cell_per_block = 2
@@ -63,3 +63,4 @@ I then explored different color spaces and different `skimage.hog()` parameters 
                                   cells_per_block=(cell_per_block, cell_per_block), transform_sqrt=False, 
                                   visualise=True, feature_vector=False)
         return features, hog_image      
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/5.png)
