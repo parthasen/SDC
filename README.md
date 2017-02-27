@@ -22,12 +22,12 @@ https://github.com/parthasen/SDC/tree/P5/output_images
 
 **Here I addressed each point in my implementation like:**  
 
-1. I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
+##### 1. I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
             cars = glob.glob("./vehicles/*/*/*.png")
             notcars = glob.glob("./non-vehicles/*/*/*.png")
  
-2. Randomly selecting and ploting same from `vehicle` class:
+##### 2. Randomly selecting and ploting same from `vehicle` class:
 
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/1.png)
  
@@ -37,7 +37,7 @@ Randomly selecting and ploting same from `non-vehicle` class:
  
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/3.png) 
  
- 3.I have Computed the histogram of the RGB channels separately.
+ ##### 3.I have Computed the histogram of the RGB channels separately.
  
         rhist = np.histogram(img[:,:,0], bins=32, range=(0, 256))
         ghist = np.histogram(img[:,:,1], bins=32, range=(0, 256))
@@ -85,7 +85,7 @@ I found the HOG features lastly.
     notcar_features = extract_features(notcars, cspace=color_space, spatial_size=spatial_size, hist_bins=hist_bins, hist_range=hist_range,
                     orient=orient, pix_per_cell=pix_per_cell, cell_per_block=cell_per_block, hog_channel=hog_channel)
 
-4.Randomization,Normalization,Suffling of training and test set features
+##### 4.Randomization,Normalization,Suffling of training and test set features
     
 First I normalized `car_features` and `notcar_features`.
       
@@ -112,7 +112,7 @@ I tested the prediction.
     0.0163 Seconds to predict 10 labels with SVC
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/8.png) 
        
-6. Implement a sliding-window technique
+##### 6. Implement a sliding-window technique
 I used `'RGB2YCrCb` and 3 individual channels HOG features for the entire image 
   
     hog1 = get_hog_features(ch1, orient, pix_per_cell, cell_per_block, feature_vec=False)
@@ -134,10 +134,10 @@ Lastly the sliding wondows were tested with `xy_window=(192, 192)`, `xy_overlap=
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/10.png)
 
-7.  Finding Lane Lines
+##### 7.  Finding Lane Lines
 I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline. 
 
-8.  Combined pipeline on a video stream. 
+###### 8.  Combined pipeline on a video stream. 
 
  
         ksize = 3
