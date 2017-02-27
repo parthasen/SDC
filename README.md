@@ -189,9 +189,11 @@ Modified pipeline is done like `img` an output of detected vehicle image as inpu
 
 ### Discussion and Challenges
 
-Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. Briefly,I did a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+*Discussion*
 
-**Challenges**
+Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. Briefly,I did a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map.
+
+*Challenges*
 
 1. Parameter tuning and finding the right combinations.
  Tuning was conducted on all test images. After achieving good results on the images, the pipeline was applied to the video. 
