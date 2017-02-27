@@ -15,7 +15,7 @@ This model detects lane and cars both from a video stream. After detection model
 
 **All the code is implemented in the Jupyter Notebook `P5.ipynb` and output of the code is in `output_images` folder**
 
-https://github.com/parthasen/SDC/blob/P5/P5-6.ipynb
+https://github.com/parthasen/SDC/blob/P5/P5.ipynb
 
 https://github.com/parthasen/SDC/tree/P5/output_images
 
@@ -155,9 +155,11 @@ Finaly `from scipy.ndimage.measurements import label` is used to determine the n
 
 Same pipeline  `process_video(image)`is applied to videos for detecting vehicles. ( notebook 26).
 
+https://github.com/parthasen/SDC/blob/P5/output_images/project_video_output.mp4
 
 I have modified the pipeline to detect both vehicles and lane using `pipeline(image)` (notebook 31).
 
+https://github.com/parthasen/SDC/blob/P5/output_images/project_video_output_comb.mp4
 
 The result contains a handful of false positives. The rectangles that identify vehicles also tend to be a bit jittery. Frame-to-frame 'smoothing' of the heatmaps was attempted, but abandoned due to time constraints. To assist with this a diagnostic view was developed, showing detection results at the top. Along the bottom are shown the:
 
