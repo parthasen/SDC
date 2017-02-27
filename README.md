@@ -45,7 +45,7 @@ Randomly selecting and ploting same from `non-vehicle` class:
  
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/3.png) 
  
- ##### 3.I have Computed the histogram of the RGB channels separately.
+ ##### 3. I have Computed the histogram of the RGB channels separately.
  
         rhist = np.histogram(img[:,:,0], bins=32, range=(0, 256))
         ghist = np.histogram(img[:,:,1], bins=32, range=(0, 256))
