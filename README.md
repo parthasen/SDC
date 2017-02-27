@@ -113,38 +113,7 @@ I tested the prediction.
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/8.png) 
        
 ##### 6. Implement a sliding-window technique
-I used `'RGB2YCrCb` and 3 individual channels HOG features for the entire image 
-  
-    hog1 = get_hog_features(ch1, orient, pix_per_cell, cell_per_block, feature_vec=False)
-    hog2 = get_hog_features(ch2, orient, pix_per_cell, cell_per_block, feature_vec=False)
-    hog3 = get_hog_features(ch3, orient, pix_per_cell, cell_per_block, feature_vec=False)
-    
-    hog_feat1 = hog1[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
-    hog_feat2 = hog2[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
-    hog_feat3 = hog3[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
-    hog_features = np.hstack((hog_feat1, hog_feat2, hog_feat3))
-and then these two functions  `svc.predict()` `cv2.rectangle()` helped to find cars.
-
-I found few false positives which can be removed using threshold to get heatmap:
-
-![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/9.png) 
-
-Lastly the sliding wondows were tested with `xy_window=(192, 192)`, `xy_overlap=(0.75, 0.75))`. Overlap was adjested from 0.5.
-
-
-![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/10.png)
-
-##### 7.  Finding Lane Lines
-I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline. 
-
-###### 8.  Combined pipeline on a video stream. 
-
- 
-        ksize = 3
-        def pipeline(image):
-        global heat, heat_list
-        car_image = image.astype(np.float32)/255
-        heatmap_factor = 0.9
+The sliding windows are created using different scales. Sliding windows are perspective, near the horizon are smaller, sliding windows closer to the camera car are larger. A total of four different scales have been used. Lastly the sliding wondows were tested with `xy_window=(192, 192)`, `xy_overlap=(0.75, 0.75))`. Overlap was adjested from 0.5.
 
         windows = slide_window(car_image, x_start_stop=[None, None], y_start_stop=[400, 500], 
                     xy_window=(64,64), xy_overlap=(0.75, 0.75))
@@ -156,39 +125,36 @@ I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline.
         windows += slide_window(car_image, x_start_stop=[None, None], y_start_stop=[430, 550], 
                     xy_window=(192, 192), xy_overlap=(0.75, 0.75))
         windows += slide_window(car_image, x_start_stop=[None, None], y_start_stop=[460, 580], 
+
+I used `'RGB2YCrCb` and 3 individual channels HOG features for the entire image 
+  
+    hog1 = get_hog_features(ch1, orient, pix_per_cell, cell_per_block, feature_vec=False)
+    hog2 = get_hog_features(ch2, orient, pix_per_cell, cell_per_block, feature_vec=False)
+    hog3 = get_hog_features(ch3, orient, pix_per_cell, cell_per_block, feature_vec=False)
     
-        xy_window=(192, 192), xy_overlap=(0.75, 0.75))
-    
-        hot_windows = search_windows(car_image, windows, svc, X_scaler, color_space=color_space, 
-                            spatial_size=spatial_size, hist_bins=hist_bins, 
-                            orient=orient, pix_per_cell=pix_per_cell, 
-                            cell_per_block=cell_per_block, 
-                            hog_channel=hog_channel)
-        heat_list.append(hot_windows)
-        # Create heatmap
-        heat_image = np.zeros_like(car_image)
-    
-        if len(heat_list) > 15:
-        heat_list.pop(0)
-        for hot_window in heat_list:
-            for window in hot_windows:
-                heat_image[window[0][1]:window[1][1], window[0][0]:window[1][0]] += 5
-        elif len(heat_list) < 15:
-        for window in hot_windows:
-            heat_image[window[0][1]:window[1][1], window[0][0]:window[1][0]] += 5
-    
-        heat_image = cv2.GaussianBlur(heat_image,(5,5),0)
-    
-        heat_image = apply_threshold(heat_image, 5) #4
-    
-        if heat == None:
-          heat = heat_image
-        else:
-        #heat_image = heat * heat_factor + heatmap_image * (1 - heatmap_factor)
-        heat_image = apply_threshold(heat_image, 10) #6
-        heat = heat_image
+    hog_feat1 = hog1[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
+    hog_feat2 = hog2[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
+    hog_feat3 = hog3[ypos:ypos+nblocks_per_window, xpos:xpos+nblocks_per_window].ravel() 
+    hog_features = np.hstack((hog_feat1, hog_feat2, hog_feat3))
+
+and then these two functions  `svc.predict()` `cv2.rectangle()` helped to find cars.
+
+I found few **false positives** which can be removed using threshold to get heatmap. Essentially any detections that are not (partially) covered by a minimum number of sliding windows is discarded. The heatmap also helps combine duplicate detections into a single detection. For this project I used a heatmap threshold of 5.
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/9.png) 
+
+
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/10.png)
+
+##### 7.  Finding Lane Lines
+I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline. 
+
+###### 8.  Combined pipeline on a video stream. 
+Finaly `from scipy.ndimage.measurements import label` is used to determine the number of vehicles and, more importantly, their bounding boxes. 
+
+    from scipy.ndimage.measurements import label
+          
  
-        labels = label(heat_image)
         img = draw_labeled_bboxes(image, labels)
     
         img = cv2.resize(img, (720, 405))
