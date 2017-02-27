@@ -2,7 +2,7 @@
 
 This model detects lane and cars both from a video stream. After detection model will draw blue rectangles around the cars detected by the model and green lane. 
  
-*The steps of this project are the following:*
+**The steps of this project are the following:**
 
 * 1.Reading Data 
 * Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images, color transformation and append binned color features, as well as histograms of color, to your HOG feature vector. 
