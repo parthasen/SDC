@@ -99,7 +99,7 @@ Then I have created training and test set randomly (test set 20%)
 
     X_train, X_test, y_train, y_test = train_test_split(scaled_X, y, test_size=0.2, random_state=12412)
     X_train, y_train = shuffle(X_train, y_train, random_state=2342)
-# 5.Linear SVM classification.      
+##### 5.Linear SVM classification.      
  
        Lastly I tried SVM classification. First I tried Linear SVM classification with spatial and histogram only `Accuracy of SVC based on spatial and histogram only=  0.9155` but that accuracy was low so I tried later with HOG features and `Test Accuracy of HOG based SVC =  0.9885` was acceptable.
 
