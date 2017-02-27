@@ -194,8 +194,7 @@ Most of the functions are from lectures. Clubbing those together helped me to cr
 **Challenges**
 
 1. Parameter tuning and finding the right combinations.
-
-        Tuning was conducted on all test images. After achieving good results on the images, the pipeline was applied to the video. 
+ Tuning was conducted on all test images. After achieving good results on the images, the pipeline was applied to the video. 
 2. Video processing was time taking. 
 3. Sliding windows grid and heatmap threshold were another parameters to optimize. Previously tuned, optimized, parameters were disturbed due to these. And another change was needed.
 4. The result contains few false positives
