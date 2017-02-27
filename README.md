@@ -8,7 +8,7 @@ This model detects lane and cars both from a video stream. After detection model
 [![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555)](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
 
 
-    Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
 
 **The steps of this project are the following:**
 
@@ -189,9 +189,10 @@ Modified pipeline is done like `img` an output of detected vehicle image as inpu
 
 ### Discussion and Challenges
 
-Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. Briefly to state the steps are like: 
-            
-Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. 
+     
+    Briefly: 
+    Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
 
 **Challenges**
 
