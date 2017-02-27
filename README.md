@@ -25,6 +25,7 @@ Based on [x=9,y=6] points calibration is done as in cell 5,I assumed z=0 of [x,y
 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P4/output_images/3.png)
 
+
 ## 3.  Color And Gradiant Threshold
 Three functions used those apply Sobel x or y, then takes an absolute value and applies a threshold. I have applied following steps in these function: 
 1)  Convert to grayscale
