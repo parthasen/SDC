@@ -164,7 +164,7 @@ https://github.com/parthasen/SDC/blob/P5/output_images/project_video_output_comb
 Modified pipeline is done like `img` an output of detected vehicle image as input to lane line finding pipeline after resizing `cv2.resize(img)`
 
 **Output Video:** 
-[![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
+[![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555)](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
 
 ### Discussion
 
