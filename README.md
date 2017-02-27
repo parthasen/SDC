@@ -37,7 +37,7 @@ Randomly selecting and ploting same from `non-vehicle` class:
  
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/3.png) 
  
- 3. I have Computed the histogram of the RGB channels separately.
+ 3.I have Computed the histogram of the RGB channels separately.
  
         rhist = np.histogram(img[:,:,0], bins=32, range=(0, 256))
         ghist = np.histogram(img[:,:,1], bins=32, range=(0, 256))
@@ -85,7 +85,7 @@ I found the HOG features lastly.
     notcar_features = extract_features(notcars, cspace=color_space, spatial_size=spatial_size, hist_bins=hist_bins, hist_range=hist_range,
                     orient=orient, pix_per_cell=pix_per_cell, cell_per_block=cell_per_block, hog_channel=hog_channel)
 
-4. Randomization,Normalization,Suffling of training and test set features
+4.Randomization,Normalization,Suffling of training and test set features
     
 First I normalized `car_features` and `notcar_features`.
       
@@ -99,7 +99,7 @@ Then I have created training and test set randomly (test set 20%)
 
     X_train, X_test, y_train, y_test = train_test_split(scaled_X, y, test_size=0.2, random_state=12412)
     X_train, y_train = shuffle(X_train, y_train, random_state=2342)
-5. Linear SVM classification.      
+# 5.Linear SVM classification.      
  
        Lastly I tried SVM classification. First I tried Linear SVM classification with spatial and histogram only `Accuracy of SVC based on spatial and histogram only=  0.9155` but that accuracy was low so I tried later with HOG features and `Test Accuracy of HOG based SVC =  0.9885` was acceptable.
 
