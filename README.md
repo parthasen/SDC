@@ -10,5 +10,6 @@
 * Estimate a bounding box for vehicles detected.
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
-    cars = glob.glob("./vehicles/*/*/*.png")
-    notcars = glob.glob("./non-vehicles/*/*/*.png")
+
+            cars = glob.glob("./vehicles/*/*/*.png")
+            notcars = glob.glob("./non-vehicles/*/*/*.png")
