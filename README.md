@@ -1,6 +1,6 @@
 **SDC:Vehicle Detection along with Lane Line finding**
 
-This model detects lane and cars both from a video stream. After detection model will draw blue rectangles around the cars detected by the model and green lane. 
+This model detects lane and cars both from a video stream. Model will draw blue rectangles around the cars detected by the model and green lane. 
 
 [![Video Output](https://i.ytimg.com/vi/cuYiJWNH3WE/2.jpg?time=1488204419880)](https://www.youtube.com/watch?v=cuYiJWNH3WE&feature=youtu.be)
 
@@ -8,7 +8,7 @@ This model detects lane and cars both from a video stream. After detection model
 [![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555)](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
 
 
-Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+Histogram of Oriented Gradients (HOG) is used for feature extraction and trained Linear SVM classifier is used after normalization of features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
 
 **The steps of this project are the following:**
 
