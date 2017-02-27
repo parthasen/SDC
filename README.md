@@ -19,6 +19,9 @@
             notcars = glob.glob("./non-vehicles/*/*/*.png")
  
 Randomly selecting and ploting same from car class:
+
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/1.png)
+ 
 Randomly selecting and ploting same from not car class:
+
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/2.png) 
