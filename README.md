@@ -202,6 +202,9 @@ Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained L
 3. Sliding windows grid and heatmap threshold were another parameters to optimize. Previously tuned, optimized, parameters were disturbed due to these. And another change was needed.
 4. The result contains few false positives
 5. The rectangles to identify vehicles is bit jittery.
+6. Unable to classify multiple non car objects such as pedestrians from cars.
+
+I will work on improving average_boxes function and find_windows_from_heatmap. The model doesn't separate two cars very well when they are close together. After this, I will combine this pipeline with the pipeline from a previous project that detects lanes.
 
 In future I'll try
 
