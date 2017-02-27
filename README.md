@@ -20,7 +20,7 @@ https://github.com/parthasen/SDC/blob/P5/P5-6.ipynb
 https://github.com/parthasen/SDC/tree/P5/output_images
 
 
-**##Here I addressed each point in my implementation like:**  
+**Here I addressed each point in my implementation like:**  
 
 1. I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
