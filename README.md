@@ -162,7 +162,7 @@ Finaly `from scipy.ndimage.measurements import label` is used to determine the n
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/12.png)
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/13.png)
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/14.png)
-![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/15.png)
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/11.png)
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/16.png)
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/17.png)
 
