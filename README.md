@@ -160,7 +160,7 @@ I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline.
 Finaly `from scipy.ndimage.measurements import label` is used to determine the number of vehicles and, more importantly, their bounding boxes. 
 
 
-![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/11.png) 
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/11.png)
 
 
 Same pipeline  `process_video(image)`is applied to videos for detecting vehicles. ( notebook 26).
