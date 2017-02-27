@@ -2,7 +2,7 @@
 
 This model detects lane and cars both from a video stream. After detection model will draw blue rectangles around the cars detected by the model and green lane. 
 
-[![Video Output](https://www.youtube.com/upload_thumbnail?v=cuYiJWNH3WE&t=2&ts=1488204261295)](https://www.youtube.com/watch?v=cuYiJWNH3WE&feature=youtu.be)
+[![Video Output](https://i.ytimg.com/vi/cuYiJWNH3WE/2.jpg?time=1488204419880)](https://www.youtube.com/watch?v=cuYiJWNH3WE&feature=youtu.be)
 
 
 [![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555)](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
@@ -172,7 +172,7 @@ Modified pipeline is done like `img` an output of detected vehicle image as inpu
 
 **Output Video:** 
 
-[![Video Output](https://www.youtube.com/upload_thumbnail?v=cuYiJWNH3WE&t=2&ts=1488204261295)](https://www.youtube.com/watch?v=cuYiJWNH3WE&feature=youtu.be)
+[![Video Output](https://i.ytimg.com/vi/cuYiJWNH3WE/2.jpg?time=1488204419880)](https://www.youtube.com/watch?v=cuYiJWNH3WE&feature=youtu.be)
 
 
 [![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555)](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
