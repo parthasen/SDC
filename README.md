@@ -13,15 +13,22 @@
 * Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
+** All the code is implemented in the Jupyter Notebook P5.ipynb and output of the code is in output_images folder**
+
+https://github.com/parthasen/SDC/blob/P5/P5-6.ipynb
+
+https://github.com/parthasen/SDC/tree/P5/output_images
+
+
 1. I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
             cars = glob.glob("./vehicles/*/*/*.png")
             notcars = glob.glob("./non-vehicles/*/*/*.png")
  
-Randomly selecting and ploting same from car class:
+Randomly selecting and ploting same from `vehicle` class:
 
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/1.png)
  
-Randomly selecting and ploting same from not car class:
+Randomly selecting and ploting same from `non-vehicle` class:
 
  ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/2.png) 
