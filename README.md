@@ -151,6 +151,21 @@ I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline.
 
 ###### 8.  Combined pipeline on a video stream. 
 Finaly `from scipy.ndimage.measurements import label` is used to determine the number of vehicles and, more importantly, their bounding boxes. 
+![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/11.png) 
+
+Same pipeline  `process_video(image)`is applied to videos for detecting vehicles. ( notebook 26).
+
+
+I have modified the pipeline to detect both vehicles and lane using `pipeline(image)` (notebook 31).
+
+
+The result contains a handful of false positives. The rectangles that identify vehicles also tend to be a bit jittery. Frame-to-frame 'smoothing' of the heatmaps was attempted, but abandoned due to time constraints. To assist with this a diagnostic view was developed, showing detection results at the top. Along the bottom are shown the:
+
+    current frame's heatmap
+    thresholded version of the heatmap
+    heatmap for the current and previoud frame's heatmap
+    tresholded version of the heatmap
+
 
     from scipy.ndimage.measurements import label
           
