@@ -1,6 +1,6 @@
 **SDC:Vehicle Detection along with Lane Line finding**
 
-            This model detects lane and cars both from a video stream. After detection model will draw blue rectangles around the cars detected by the model and green lane. 
+This model detects lane and cars both from a video stream. After detection model will draw blue rectangles around the cars detected by the model and green lane. 
  
 *The steps of this project are the following:*
 
