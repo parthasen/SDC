@@ -189,10 +189,7 @@ Modified pipeline is done like `img` an output of detected vehicle image as inpu
 
 ### Discussion and Challenges
 
-Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. 
-     
-    Briefly: 
-    Perform a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
+Most of the functions are from lectures. Clubbing those together helped me to create a working pipeline. Briefly,I did a Histogram of Oriented Gradients (HOG) feature extraction and trained Linear SVM classifier after normalization of                     features and randomizied selection.Then I have implemented a sliding-window technique and trained SVM classifier to search for vehicles in images. Then I run video on my pipeline on a video stream after using threshold of 5 and creating a heat map of recurring detections frame by frame to reject outliers.
 
 **Challenges**
 
@@ -207,7 +204,7 @@ Most of the functions are from lectures. Clubbing those together helped me to cr
 
 I will work on improving average_boxes function and find_windows_from_heatmap. The model doesn't separate two cars very well when they are close together. After this, I will combine this pipeline with the pipeline from a previous project that detects lanes.
 
-In future I'll try
+*In future I'll try*
 
 1. Better error handling and application of class.
 2. Additional feature extraction using a grid search approach, removing duplicate and highly correlated features, etc.
