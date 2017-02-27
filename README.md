@@ -149,7 +149,7 @@ I found few **false positives** which can be removed using threshold to get heat
 ##### 7.  Finding Lane Lines
 I used https://github.com/parthasen/SDC/blob/P4/P4.ipynb code to get pipeline. 
 
-###### 8.  Combined pipeline on a video stream. 
+##### 8.  Combined pipeline on a video stream. 
 Finaly `from scipy.ndimage.measurements import label` is used to determine the number of vehicles and, more importantly, their bounding boxes. 
 ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/11.png) 
 
@@ -157,26 +157,15 @@ Same pipeline  `process_video(image)`is applied to videos for detecting vehicles
 
 https://github.com/parthasen/SDC/blob/P5/output_images/project_video_output.mp4
 
-I have modified the pipeline to detect both vehicles and lane using `pipeline(image)` (notebook 31).
+I have modified the pipeline to detect both **vehicles and lane** using `pipeline(image)` (notebook 31).
 
 https://github.com/parthasen/SDC/blob/P5/output_images/project_video_output_comb.mp4
 
-The result contains a handful of false positives. The rectangles that identify vehicles also tend to be a bit jittery. Frame-to-frame 'smoothing' of the heatmaps was attempted, but abandoned due to time constraints. To assist with this a diagnostic view was developed, showing detection results at the top. Along the bottom are shown the:
+Modified pipeline is done like `img` an output of detected vehicle image as input to lane line finding pipeline after resizing `cv2.resize(img)`
 
-    current frame's heatmap
-    thresholded version of the heatmap
-    heatmap for the current and previoud frame's heatmap
-    tresholded version of the heatmap
+**Output Video:** 
+[![Video Output](https://i.ytimg.com/vi/DR7rsjxe2Ng/2.jpg?time=1488203947555](https://www.youtube.com/watch?v=DR7rsjxe2Ng)
 
+### Discussion
 
-    from scipy.ndimage.measurements import label
-          
- 
-        img = draw_labeled_bboxes(image, labels)
-    
-        img = cv2.resize(img, (720, 405))
-        result = cv2.addWeighted(img, 1, unwarp, 0.3, 0)
-        
-        ....
-
-        return result
+The result contains few false positives and the rectangles to identify vehicles is bit jittery.
