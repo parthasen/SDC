@@ -201,7 +201,7 @@ Most of the functions are from lectures. Clubbing those together helped me to cr
 5. The rectangles to identify vehicles is bit jittery.
 6. Unable to classify multiple non car objects such as pedestrians from cars.
 
-*In future I'll try*
+*In future I'll try to make more robust by:*
 
 1. Better error handling and application of class.
 2. Additional feature extraction using a grid search approach, removing duplicate and highly correlated features, etc.
