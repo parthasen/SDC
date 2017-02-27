@@ -201,8 +201,6 @@ Most of the functions are from lectures. Clubbing those together helped me to cr
 5. The rectangles to identify vehicles is bit jittery.
 6. Unable to classify multiple non car objects such as pedestrians from cars.
 
-I will work on improving average_boxes function and find_windows_from_heatmap. The model doesn't separate two cars very well when they are close together. After this, I will combine this pipeline with the pipeline from a previous project that detects lanes.
-
 *In future I'll try*
 
 1. Better error handling and application of class.
