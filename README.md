@@ -13,7 +13,7 @@
 * Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
-** All the code is implemented in the Jupyter Notebook P5.ipynb and output of the code is in output_images folder**
+**All the code is implemented in the Jupyter Notebook P5.ipynb and output of the code is in output_images folder**
 
 https://github.com/parthasen/SDC/blob/P5/P5-6.ipynb
 
