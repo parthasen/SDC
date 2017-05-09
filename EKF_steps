@@ -1,4 +1,6 @@
-Basic Build Instructions
+https://github.com/udacity/CarND-Extended-Kalman-Filter-Project/tree/project_v2
+
+1. Basic Build Instructions
 
     Clone this repo.
     Make a build directory: mkdir build && cd build
@@ -7,8 +9,40 @@ Basic Build Instructions
     Run it: ./ExtendedKF path/to/input.txt path/to/output.txt. You can find some sample inputs in 'data/'.
         eg. ./ExtendedKF ../data/obj_pose-laser-radar-synthetic-input.txt
 
+2. Code Style
+
+Please (do your best to) stick to Google's C++ style guide. https://google.github.io/styleguide/cppguide.html
 
 
-1. Clone or ZIP
+ 3.    Complete the Extended Kalman Filter algorithm in C++.
+    Ensure that your project compiles.
+        From the root of the repo:
+            mkdir build && cd build
+            cmake .. && make
+            ./ExtendedKF path/to/input.txt path/to/output.txt
+    Test your Kalman Filter against the sample data. Ensure that the px, py, vx, and vy RMSE are below the 
+    values specified in the rubric.
+4. Resources:
+a. https://github.com/udacity/CarND-Extended-Kalman-Filter-Project
+
+    a data file for testing your extended Kalman filter
+    starter code in the src folder
+    a README file with instructions on compiling the code
+    a Docs folder, which contains details about the structure of the code templates
+    CMakeLists.txt file that will be used when compiling your code (you do not need to change this file)
+b. https://github.com/udacity/CarND-Mercedes-SF-Utilities
+c. Clone or ZIP
 https://github.com/udacity/CarND-Extended-Kalman-Filter-Project/tree/project_v2
+https://github.com/udacity/self-driving-car-sim/releases/tag/v1.0
+https://github.com/uWebSockets/uWebSockets
+
+Once the install for uWebSocketIO is complete, the main program can be built and ran by doing the following 
+from the project top directory.
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ./ExtendedKF
+
 2. 
