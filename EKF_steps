@@ -11,11 +11,13 @@ install-ubuntu.sh
     cmake ..
     make
     ./ExtendedKF
-6. Code Style
 
+6. Code Style: 
 Please (do your best to) stick to Google's C++ style guide. https://google.github.io/styleguide/cppguide.html
-7. Resources:
+
+7. visualization and data generation utilities: 
 https://github.com/udacity/CarND-Mercedes-SF-Utilities/tree/master/python
+
 8. 
 INPUT: values provided by the simulator to the c++ program
 
