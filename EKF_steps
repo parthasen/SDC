@@ -33,3 +33,4 @@ OUTPUT: values provided by the c++ program to the simulator
 ---
 9. Project Rubric
 https://review.udacity.com/#!/rubrics/748/view
+px, py, vx, and vy RMSE should be less than or equal to the values [.11, .11, 0.52, 0.52]. 
