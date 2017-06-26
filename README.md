@@ -1,5 +1,5 @@
 # SDC : Extended Kalman Filter
- ![Calibration result](https://github.com/parthasen/SDC/blob/P5/output_images/1.png)
+ ![Calibration result](https://github.com/parthasen/SDC/blob/P6/Screenshot%20from%202017-06-26%2016-59-31.png)
 
 1. Cloned the repo 
 https://github.com/udacity/CarND-Extended-Kalman-Filter-Project
