@@ -22,9 +22,8 @@ Please (do your best to) stick to Google's C++ style guide. https://google.githu
 https://github.com/udacity/CarND-Mercedes-SF-Utilities/tree/master/python
 
 8. 
-INPUT: values provided by the simulator to the c++ program
-
-["sensor_measurement"] => the measurment that the simulator observed (either lidar or radar)
+INPUT: values provided by the simulator to the c++ program 
+     ["sensor_measurement"] => the measurment that the simulator observed (either lidar or radar)
 
 
 OUTPUT: values provided by the c++ program to the simulator
