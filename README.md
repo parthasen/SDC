@@ -26,15 +26,14 @@ INPUT: values provided by the simulator to the c++ program
      ["sensor_measurement"] => the measurment that the simulator observed (either lidar or radar)
 
 
-OUTPUT: values provided by the c++ program to the simulator
-
-["estimate_x"] <= kalman filter estimated position x
-["estimate_y"] <= kalman filter estimated position y
-["rmse_x"]
-["rmse_y"]
-["rmse_vx"]
-["rmse_vy"]
----
+OUTPUT: values provided by the c++ program to the simulator 
+  ["estimate_x"] <= kalman filter estimated position x
+  ["estimate_y"] <= kalman filter estimated position y
+  ["rmse_x"]
+  ["rmse_y"]
+  ["rmse_vx"]
+  ["rmse_vy"]
+   ---
 9. Project Rubric
 https://review.udacity.com/#!/rubrics/748/view
 px, py, vx, and vy RMSE should be less than or equal to the values [.11, .11, 0.52, 0.52]. 
