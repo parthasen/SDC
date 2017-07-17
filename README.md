@@ -1,8 +1,6 @@
 # SDC
 
-https://www.youtube.com/edit?o=U&video_id=6R6rSvZxYWk
-
-[![Video Output](https://i.ytimg.com/vi/6R6rSvZxYWk/2.jpg?time=1500313688354)](https://https://www.youtube.com/edit?o=U&video_id=6R6rSvZxYWk)
+[![Video Output](https://i.ytimg.com/vi/6R6rSvZxYWk/2.jpg?time=1500313688354)](https://www.youtube.com/watch?v=6R6rSvZxYWk)
 
 # CarND-Controls-MPC
 Self-Driving Car Engineer Nanodegree Program
