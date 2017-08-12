@@ -54,3 +54,13 @@ https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow
 Q(s,a) = r + γ(max(Q(s’,a’))
 https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
 http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/
+https://github.com/aiworld/aiworld
+https://github.com/aiworld/dqn/tree/dev/python
+http://www.habrador.com/p/self-driving-car/
+https://forum.unity3d.com/threads/cant-make-a-simple-patrol-waypoint.272336/
+http://planning.cs.uiuc.edu/node822.html
+http://www.habrador.com/tutorials/pid-controller/
+http://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html
+https://github.com/openai/gym
+https://github.com/lusob/gym-ple
+https://gym.openai.com/envs/FrozenLake-v0
