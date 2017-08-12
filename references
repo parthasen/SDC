@@ -35,3 +35,22 @@ https://github.com/pseudoyim/galvaneye
 https://github.com/MickyDowns/deep-theano-rnn-lstm-car
 https://github.com/BenderV/self_driving_car
 
+http://robotsforroboticists.com/lidar-vs-radar/
+http://robotsforroboticists.com/lidar-fundamentals/
+https://www.digikey.com/en/articles/techzone/2016/nov/radar-sensing-for-driverless-vehicles
+
+
+
+RL algorithms called Q-Learning algorithms
+
+policy-based algorithms
+
+
+
+https://diyrobocars.com/software/
+https://github.com/MCKapur/SPCSAISelfDrivingCar
+https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
+
+Q(s,a) = r + γ(max(Q(s’,a’))
+https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
+http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/
